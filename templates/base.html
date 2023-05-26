@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+	<head>	
+		<meta charset="ut-8">
+		<meta http-equiv="X-UA-Compatible" content="ie,edge,safari,chrome=1.0">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<link rel="stylesheet" href="{{url_for('static',filename='css/w3.css')}}">
+		<title>Student Management v1.0</title>
+	</head>
+	<body>
+		<!--header-->
+		<div class="w3-container w3-green w3-card-4">
+			<h3>{{ headername | upper}}</h3>
+			<div class="w3-bar ">
+				<div class="w3-bar-item w3-right">
+					{%block menu%}
+					{%endblock%}
+				</div>
+			</div>
+		</div>
+		
+		<div class="w3-padding-large">
+			
+				{%with messages = get_flashed_messages()%}
+					{%for message in messages%}
+						<div class="w3-panel w3-khaki">
+							<p class="w3-text-red">{{ message }}</p>
+						</div>
+					{%endfor%}
+				{%endwith%}
+			
+			{%block content%}
+			{%endblock%}
+		</div>
+	</body>
+</html>
+
+
