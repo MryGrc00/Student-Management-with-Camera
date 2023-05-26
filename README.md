@@ -1,2 +1,2 @@
 # Student-Management-with-Camera
-CRUD
+// To run the file, install venv in the terminal, run as venv.
